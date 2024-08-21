@@ -1,0 +1,18 @@
+package th.ac.ku.kps.cs;
+
+public class Main {
+
+	public static void main(String[] args) {
+		BallA a = new BallA("Zentia");
+		BallB b = new BallB("Zapphire");
+		BallB c = new BallB("Zenith");
+		TestBall(a,1);
+		TestBall(b,1.1);
+		TestBall(c,1.2);
+	}
+	static void TestBall(Ball tradeMark, double d) {
+		System.out.println(tradeMark.toString());
+		tradeMark.inflate(d);
+		((RollAble) tradeMark).roll();
+	}
+}
