@@ -1,0 +1,20 @@
+package th.ac.ku.kps.cs;
+
+public abstract class BaseAccount implements Withdrawable {
+	public abstract boolean deposit(double amount);
+}
+class SavingAccount extends BaseAccount{
+
+	@Override
+	public boolean withdraw(double amount) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean deposit(double amount) {
+		
+		return false;
+	}
+	
+}
