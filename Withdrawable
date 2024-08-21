@@ -1,0 +1,7 @@
+package th.ac.ku.kps.cs;
+
+interface Withdrawable{
+	public boolean withdraw(double amount);
+		
+	
+}
