@@ -22,7 +22,7 @@ class BallA extends Ball implements RollAble{
 	}
 	
 	public void roll() {
-		System.out.println("rolls rather smoothly.");
+		System.out.println(getBall()+" rolls rather smoothly.");
 	}
 
 	public void inflate(double d) {
@@ -39,7 +39,7 @@ class BallB extends BallA{
 		super(tradeMark);
 	}
 	public void roll() {
-		System.out.println("rolls smoothly.");
+		System.out.println(getBall()+" rolls smoothly.");
 	}
 	public String toString() {
 		return getBall()+" is a trademark of BallB";
@@ -52,7 +52,7 @@ class BallC extends BallA{
 		super(tradeMark);
 	}
 	public void roll() {
-		System.out.println("rolls very smoothly.");
+		System.out.println(getBall()+" rolls very smoothly.");
 	}
 	public String toString() {
 		return getBall()+" is a trademark of BallC";
