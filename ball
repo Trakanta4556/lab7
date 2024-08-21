@@ -1,0 +1,60 @@
+package th.ac.ku.kps.cs;
+
+public abstract class Ball {
+	private String tradeMark;
+	
+	public Ball(String treadMark) {
+		this.tradeMark = treadMark;
+	}
+	public String getBall() {
+		return tradeMark;
+	}
+	public abstract void inflate(double d);
+}
+
+interface RollAble{
+	public void roll();
+}
+
+class BallA extends Ball implements RollAble{
+	public BallA(String tradeMark) {
+		super(tradeMark);
+	}
+	
+	public void roll() {
+		System.out.println("rolls rather smoothly.");
+	}
+
+	public void inflate(double d) {
+		System.out.println(getBall()+"'s ball is inflated "+d+" cu.ft.");
+	}
+	public String toString() {
+		return getBall()+" is a trademark of BallA";
+	}
+}
+
+class BallB extends BallA{
+
+	public BallB(String tradeMark) {
+		super(tradeMark);
+	}
+	public void roll() {
+		System.out.println("rolls smoothly.");
+	}
+	public String toString() {
+		return getBall()+" is a trademark of BallB";
+	}
+}
+
+class BallC extends BallA{
+	
+	public BallC(String tradeMark) {
+		super(tradeMark);
+	}
+	public void roll() {
+		System.out.println("rolls very smoothly.");
+	}
+	public String toString() {
+		return getBall()+" is a trademark of BallC";
+	}
+}
