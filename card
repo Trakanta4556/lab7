@@ -3,4 +3,22 @@ package th.ac.ku.kps.cs;
 public abstract class Card implements Withdrawable{
 	public abstract String type();
 	public abstract double discount();
+	class DebitCard extends Card{
+
+		@Override
+		public boolean withdraw(double amount) {
+			return false;
+		}
+
+		@Override
+		public String type() {
+			return null;
+		}
+
+		@Override
+		public double discount() {
+			return 0;
+		}
+		
+	}
 }
