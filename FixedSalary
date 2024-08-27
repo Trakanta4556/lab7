@@ -1,0 +1,17 @@
+package th.ac.ku.kps.cs;
+	public class FixedSalary extends Employee{
+	    private double MonthlySalary;
+	    
+	    public FixedSalary (String first, String last, String ssn, double s){
+	        super(first, last, ssn);
+	        MonthlySalary = s;
+	    }
+
+	    public double earnings() {
+	        return MonthlySalary;
+	    }
+
+	    public String toString(){
+	        return "Fixed salary employee: "+super.toString()+"\nmonthly salary: $"+MonthlySalary;
+	    }
+	}
